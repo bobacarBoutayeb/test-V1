@@ -4,11 +4,19 @@ namespace Tests\Feature;
 
 use App\Models\Article;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
 class ArticleTest extends TestCase
 {
     use RefreshDatabase;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        Artisan::call('migrate');
+        Artisan::call('db:seed');
+    }
 
     public function testShowArticle()
     {
