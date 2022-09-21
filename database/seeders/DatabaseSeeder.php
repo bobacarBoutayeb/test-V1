@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -24,6 +23,7 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('pwd'),
                 'bio' => 'Je voudrais devenir enseignante pour enfants',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]);
         $id_Musonda = DB::table('users')->insertGetId(
             [
@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('pwd2'),
                 'bio' => 'Je songe à devenir infirmière, j’écris mes réflexions',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         );
 
@@ -43,6 +44,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Pas le choix, ils sont faits faut les nourrir',
                 'body' => 'ouhlala',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         );
         $id_articleMusonda1 = DB::table('articles')->insertGetId(
@@ -53,6 +55,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Pokepoke',
                 'body' => 'pouet',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         );
         $id_articleMusonda2 = DB::table('articles')->insertGetId(
@@ -63,6 +66,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Pokepoke ya faim',
                 'body' => 'pouet ??',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         );
 
@@ -101,6 +105,7 @@ class DatabaseSeeder extends Seeder
                 'article_id' => $id_articleRose,
                 'body' => 'Wow t\' trop raison !!! Pas le choix ROTFL',
                 'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]
         );
 

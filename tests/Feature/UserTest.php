@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
-use function PHPUnit\Framework\assertEquals;
 
 class UserTest extends TestCase
 {
@@ -24,16 +23,9 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_getRouteKeyName(): void
     {
         $user = new User();
-
-        assertEquals('username',$user->getRouteKeyName());
-
-        /*
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-        */
+        $this->assertEquals('username',$user->getRouteKeyName());
     }
 }
